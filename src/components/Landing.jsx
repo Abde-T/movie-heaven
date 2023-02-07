@@ -7,8 +7,9 @@ function Landing() {
 
   async function getMovies() {
     const { data } = await axios.get(
-      "http://www.omdbapi.com/?i=tt3896198&apikey=19c6ed6a"
+      `https://www.omdbapi.com/?s=fast&apikey=19c6ed6a`
     );
+    console.log(data);
     setMovies(data);
   }
 
@@ -17,9 +18,28 @@ function Landing() {
   }, []);
 
   return (
-    <div className="container">
-      
-    </div>
+    //.filter((movie) =>( movie.t==="fast").slice(0.4)
+    <>
+      <div className="container">
+        <div className="row">
+          <div className="section__title">
+            <h1> Best series: </h1>
+          </div>
+          <div className="movie__list">
+            {movies.map((movie) => (
+              <div className="movie" key={movie.imdbID}>
+                <img
+                  src={movie.Poster}
+                  alt=""
+                  className="movie__img"
+                />
+                <h3>{movie.Title}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 

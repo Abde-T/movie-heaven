@@ -17,7 +17,8 @@ html {
   margin: 0 auto;
   padding: 0;
   width: 100%;
-  max-width: 1200px;
+  background-color: #757575;
+
 }
 .App {
   display: flex;
@@ -49,6 +50,17 @@ img {
   width: 100px;
   height: 100px;
   margin: auto 0;
+}
+.logo__name{
+  display: flex;
+  align-items: center;
+  margin: auto 0;
+  color: #f0dcae;
+  -webkit-text-stroke: 0.3px #a79a9a;
+  text-align: justify;
+}
+.name:hover{
+  scale: 1.1;
 }
 .logo:hover{
   scale: 1.1;
@@ -83,12 +95,13 @@ li {
 
 .nav__search{
   background-color: #f0dcae;
-  width: 300px;
+  width: 100%;
+  max-width: 500px;
   height: 30px;
   border-radius: 10px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   
 }
 input{
@@ -96,13 +109,43 @@ input{
   background-color: transparent;
   font-size: 18px;
   font-weight: bold;
+  margin-left: 20px;
 }
 input:focus{
   outline: none;
 }
 .search__icon{
   cursor: pointer;
+  margin-right: 20px;
 }
 .search__icon:active{
   scale: 1.1;
+}
+
+.movie{
+  color:#f0dcae;
+  
+}
+.row{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  border: 1px solid white;
+}
+.movie__img{
+  height: 300px;
+  width: 200px;
+}
+.movie__list{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 90px -24px 0 0;
+
+}
+.section__title{
+  color: #f0dcae;
+  -webkit-text-stroke: 0.3px #ffffff75;
+  margin: 120px 0 0 0 ;
+
 }

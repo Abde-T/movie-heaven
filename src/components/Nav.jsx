@@ -9,7 +9,10 @@ function Nav() {
     return (
         <nav>
             <div className='nav__container'>
+                <div className='logo__name'>
                 <img src={Popcorn} alt="" className='logo'/>
+                    <h1 className='name'>Movie <br /> Heaven</h1>
+                </div>
                 <div className='nav__search'>
                     <input type="text" placeholder="Search.." ></input>
                     <FontAwesomeIcon icon="play" className='search__icon'/>
