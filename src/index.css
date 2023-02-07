@@ -1,13 +1,108 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+  
+}
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,500;1,400;1,700&display=swap');
+
+::selection{
+  background:#2e2d2dc0;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1200px;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav {
+  height: 80px;
+  display: flex;
+  box-shadow: 0 2px 50px 100px #242424;
+  background-color: #242424;
+  position: relative;
+}
+img {
+  height: 100%;
+  width: 100%;
+}
+.nav__container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.logo{
+  width: 100px;
+  height: 100px;
+  margin: auto 0;
+}
+.logo:hover{
+  scale: 1.1;
+
+}
+ul {
+  display: flex;
+  color: #f0dcae;
+}
+
+li {
+  list-style-type: none;
+}
+.nav__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 8px;
+  rotate: 180deg;
+  cursor: pointer;
+  
+}
+.nav__link :hover{
+  scale: 1.1;
+
+}
+.nav__icon--1{
+  margin-right: 30px;
+}
+
+.nav__search{
+  background-color: #f0dcae;
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+input{
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: bold;
+}
+input:focus{
+  outline: none;
+}
+.search__icon{
+  cursor: pointer;
+}
+.search__icon:active{
+  scale: 1.1;
 }
