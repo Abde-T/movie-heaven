@@ -1,9 +1,9 @@
-import React from "react";
-import Popcorn from "../assets/Popcorn.jpeg";
-import Bt from "../assets/bt.png";
+import Popcorn from "../assets/Popcorn.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
 
 function Main() {
+ 
   return (
     <div className="main__container">
       <div className="sub__container">
@@ -20,28 +20,23 @@ function Main() {
             </h1>
           </div>
           <div className="search" id="movieForm">
-            <input id="movie" type="text" placeholder="Search.." autoComplete="on"></input>
+            <input
+              id="movie"
+              type="text"
+              placeholder="Search.."
+              autoComplete="on"
+            ></input>
             <FontAwesomeIcon icon="play" className="search__icon" />
           </div>
           <div className="info">
-            <h1>
+            <h1 className="main__description">
               <span className="yellow"> Movie Heaven </span> best place to watch
               all of your favorite movies
             </h1>
           </div>
         </div>
       </div>
-      <footer>
-        <div className="footer">
-      <img src={Popcorn} alt="" className="logo" />
-        <ul className="links">
-          <li className="link">Home</li>
-          <li className="link">Movies</li>
-          <li className="link">Most Popular</li>
-        </ul>
-        </div>
-        <div className="footer__copyright">Copyright © Movie Heaven</div>
-      </footer>
+      
     </div>
   );
 }

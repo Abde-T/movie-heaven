@@ -6,10 +6,33 @@
   
 }
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,500;1,400;1,700&display=swap');
-
-::selection{
-  background:#2e2d2dc0;
+body{
+  background-color: #242424;
 }
+::selection{
+  background:#504e4ec0;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #414141; 
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f0dcae;; 
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -50,6 +73,7 @@ img {
   width: 100px;
   height: 100px;
   margin: auto 0;
+
 }
 .logo__name{
   display: flex;
@@ -137,13 +161,9 @@ input:focus{
 .movie__img{
   height: 300px;
   width: 200px;
+  margin-right: 20px;
 }
-.movie__list{
-  display: flex;
-  flex-wrap: wrap;
-  margin: 90px -24px 0 0;
 
-}
 .section__title{
   color: #f0dcae;
   -webkit-text-stroke: 0.3px #ffffff75;
@@ -151,19 +171,43 @@ input:focus{
 
 }
 .main__container{
-  background-color: #242424;
   width: 100%;
-  height: 100vh;
+  background-image: url(./assets/144563.jpg);
+  background-position: center;
+  background-size: auto;
+  box-shadow: 50px 50px 1000px 100px black inset;
+}
+.movie__container{
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  
+}
+.sec__title{
+  text-align: left;
+  font-size: 50px;
+  margin: 50px 0 50px 0;
+}
+.movie__list{
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
   
   
 }
-.sub__container{
+.movies{
   width: 100%;
   max-width: 1200px;
 }
+.sub__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1920px;
+}
+
+
 .link{
   margin-left: 20px;
   font-size: 25px;
@@ -172,15 +216,14 @@ input:focus{
 .links{
   height: 200px;
   width: 100%;
+  max-width: 1200px;
   align-items: center;
-  
 }
 .wallpaper{
   background-image:url(./assets/bt.png);
   background-size:contain;
   background-position: 505px;
   background-repeat: no-repeat;
-  background-color: aliceblue;
   width: 100%;
   max-width: 1200px;
   height: 500px;
@@ -188,8 +231,12 @@ input:focus{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
-  
+  margin-top: -60px;
+}
+.main__description{
+  color: aliceblue;
+  font-weight: 400;
+  font-size: 25px;
 }
 .logo_name{
   margin-bottom: 20px;
@@ -226,8 +273,12 @@ input:focus{
 .footer{
   display: flex;
   width: 100%;
+  background-color: #242424;
+  height: 300px;
+  display: flex;
+  align-items: center;
 }
 .footer__copyright{
-  margin-top: -25px;
+  margin-top: -80px;
   color: white;
 }
