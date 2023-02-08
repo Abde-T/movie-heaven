@@ -26,16 +26,14 @@ function Landing() {
             <h1> Best series: </h1>
           </div>
           <div className="movie__list">
-            {movies.map((movie) => (
-              <div className="movie" key={movie.imdbID}>
+             <div className="movie" >
                 <img
-                  src={movie.Poster}
+                  src=""
                   alt=""
                   className="movie__img"
                 />
-                <h3>{movie.Title}</h3>
+                <h3>movie.Title</h3>
               </div>
-            ))}
           </div>
         </div>
       </div>
