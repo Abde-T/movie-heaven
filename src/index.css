@@ -44,6 +44,10 @@ html {
   background-color: #757575;
 
 }
+a{
+  color: #f0dcae;
+  text-decoration: none;
+}
 .App {
   display: flex;
   flex-direction: column;

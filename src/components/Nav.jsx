@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SearshBar from "./SearshBar";
 import Movies from "./Movies";
 import Featured from "./Featured";
+import Footer from "./Footer";
 
 function Nav(props) {
     const [movies, setMovies] = useState([]);
@@ -27,9 +28,13 @@ function Nav(props) {
 
       <div className="nav__container">
         <div className="logo__name">
+            <Link to="/">
           <img src={Popcorn} alt="" className="logo" />
+            </Link>
           <h1 className="name">
+          <Link to="/">
             Movie <br /> Heaven
+            </Link>
           </h1>
         </div>
         <div className="nav__search">
@@ -40,7 +45,10 @@ function Nav(props) {
             <FontAwesomeIcon icon="video" />
           </li>
           <li className="nav__icon">
+            <a href="#featured">
             <FontAwesomeIcon icon="film" />
+            </a>
+
           </li>
         </ul>
       </div>
@@ -49,7 +57,10 @@ function Nav(props) {
           <span className="yellow"> {searchValue}</span>
         </div>
          <Movies  movies={movies} />
+         <div id="featured">
       <Featured/>
+         </div>
+         <Footer/>
     </div>
     
   );
