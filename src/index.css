@@ -50,13 +50,7 @@ html {
   min-height: 100vh;
 }
 
-nav {
-  height: 80px;
-  display: flex;
-  box-shadow: 0 2px 50px 100px #242424;
-  background-color: #242424;
-  position: relative;
-}
+
 img {
   height: 100%;
   width: 100%;
@@ -308,7 +302,6 @@ input:focus{
   display: flex;
   width: 100%;
   max-width: 1200px;
-  background-color: #242424;
   display: flex;
   align-items: center;
 

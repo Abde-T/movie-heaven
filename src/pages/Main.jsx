@@ -5,10 +5,26 @@ import { Link } from "react-router-dom";
 import Featured from "../components/Featured";
 import Footer from "../components/Footer";
 import Movies from "../components/Movies";
+import SearshBar from "../components/SearshBar";
 
 
 
 const Main = (props) => {
+  const [movies, setMovies] = useState([]);
+    const [searchValue, setSearchValue] = useState("");
+  
+    const getMovies = async (searchValue) => {
+      const finalData = await (
+        await fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=19c6ed6a`)
+      ).json();
+  
+      if (finalData.Search) {
+        setMovies(finalData.Search);
+      }
+    };
+    useEffect(() => {
+      getMovies(searchValue);
+    }, [searchValue]);
   return (
     <>
       <div className="main__container">
@@ -28,13 +44,7 @@ const Main = (props) => {
               </h1>
             </div>
             <div className="search" id="movieForm">
-              <input
-                id="movie"
-                placeholder="Search.."
-                value={props.value}
-                onChange={(event) => props.setSearchValue(event.target.value)}
-              ></input>
-              <FontAwesomeIcon icon="play" className="search__icon" />
+             <SearshBar searchValue={searchValue} setSearchValue={setSearchValue}/>
             </div>
             <div className="info">
               <h1 className="main__description">
@@ -45,7 +55,12 @@ const Main = (props) => {
           </div>
         </div>
       </div>
-  
+      <div className="sec__title">
+          <span className="yellow"> {searchValue}</span>
+      </div>
+      <Movies movies={movies} />
+      <Featured/>
+      <Footer/>
     </>
   );
 }

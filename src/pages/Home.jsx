@@ -1,14 +1,11 @@
-import React from 'react';
-import Landing from '../components/Landing';
+import React, { useEffect, useState } from 'react';
 import Nav from '../components/Nav';
 
 
 function Home() {
-
     return (
         <>
             <Nav/>
-            <Landing />
         </>
     );
 }
