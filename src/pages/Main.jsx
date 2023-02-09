@@ -1,17 +1,22 @@
 import Popcorn from "../assets/Popcorn.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import Featured from "../components/Featured";
+import Footer from "../components/Footer";
+import Movies from "../components/Movies";
 
 
 
 const Main = (props) => {
-
   return (
     <>
       <div className="main__container">
         <div className="sub__container">
           <ul className="links">
-            <li className="link">Home</li>
+            <li className="link">
+              Home
+              </li>
             <li className="link">Movies</li>
             <li className="link">Most Popular</li>
           </ul>
@@ -40,6 +45,7 @@ const Main = (props) => {
           </div>
         </div>
       </div>
+  
     </>
   );
 }

@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: 'Josefin Sans', sans-serif;
   
+  
 }
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,500;1,400;1,700&display=swap');
 body{
@@ -167,11 +168,18 @@ input:focus{
 .movie__img{
   height: 300px;
   width: 200px;
-  margin-right: 20px;
+  margin-right: 50px;
   margin-bottom: 20px;
   border: 8px double #f0dcae;
   box-shadow: 0 0 10px #f0dcae;
-  z-index: 1;
+}
+.movies__img{
+  height: 300px;
+  width: 200px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  border: 8px double #f0dcae;
+  box-shadow: 0 0 10px #f0dcae;
 }
 
 .section__title{
@@ -179,6 +187,17 @@ input:focus{
   -webkit-text-stroke: 0.3px #ffffff75;
   margin: 120px 0 0 0 ;
 
+}
+.fea_{
+  font-size: 30px;
+  margin-bottom: 50px;
+  font-weight: 900;
+  text-shadow: 0 0 10px #f0dcae;
+}
+.fea__title{
+  font-size: 30px;
+  margin: 50px 0;
+  text-shadow: 0 0 10px #f0dcae;
 }
 .main__container{
   width: 100%;

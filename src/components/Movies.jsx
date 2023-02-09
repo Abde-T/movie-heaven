@@ -8,8 +8,7 @@ function Movies(props) {
         <div className="search__movie__list">
           {props.movies.map((movie) => (
             <div className="movie" key={movie.imdbID}>
-              <img src={movie.Poster} alt="" className="movie__img" />
-              
+              <img src={movie.Poster} alt="" className="movies__img" />
             </div>
           ))}
         </div>
