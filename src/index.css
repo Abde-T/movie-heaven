@@ -151,6 +151,12 @@ input:focus{
   color:#f0dcae;
   
 }
+.search__movie__list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
 .row{
   width: 100%;
   max-width: 1200px;
@@ -162,6 +168,10 @@ input:focus{
   height: 300px;
   width: 200px;
   margin-right: 20px;
+  margin-bottom: 20px;
+  border: 8px double #f0dcae;
+  box-shadow: 0 0 10px #f0dcae;
+  z-index: 1;
 }
 
 .section__title{
@@ -186,7 +196,12 @@ input:focus{
 .sec__title{
   text-align: left;
   font-size: 50px;
-  margin: 50px 0 50px 0;
+  color: white;
+  font-weight: 100;
+  width: 100%;
+  max-width: 1200px;
+  margin: 25px auto;
+  
 }
 .movie__list{
   display: flex;
@@ -273,12 +288,24 @@ input:focus{
 .footer{
   display: flex;
   width: 100%;
+  max-width: 1200px;
   background-color: #242424;
-  height: 300px;
   display: flex;
   align-items: center;
+
+  z-index: 0;
 }
 .footer__copyright{
-  margin-top: -80px;
+  margin-top: -50px;
   color: white;
+}
+
+.searchMovies{
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1200px;
+  font-size: 50px;
+  color: aqua;
+  border: 1px solid white;
 }
