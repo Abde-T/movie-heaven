@@ -8,7 +8,6 @@ function Home() {
     return (
         <>
             <Nav/>
-            <Featured titelSearch="fast" title="Fast And Furious"/>
             <Footer/>
         </>
     );
