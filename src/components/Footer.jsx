@@ -5,7 +5,7 @@ import Popcorn from "../assets/Popcorn.png";
 function Footer() {
   return (
     <footer className="movie__container">
-      <div>
+      <div className="wrapper">
         <div className="footer">
           <img src={Popcorn} alt="" className="logo" />
           <ul className="links">

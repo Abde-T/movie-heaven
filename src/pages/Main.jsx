@@ -71,7 +71,11 @@ const Main = (props) => {
       </div>
       <Movies movies={movies} />
       <div id="featured">
-      <Featured />
+      <div className="sec__title">
+            <h1 className="fea_">Featured Franchises:</h1>
+          </div>
+      <Featured  titelSearch="fast" title="Fast And Furious"/>
+      <Featured  titelSearch="Spider" title="Spider Man"/>
       </div>
       <Footer />
     </>

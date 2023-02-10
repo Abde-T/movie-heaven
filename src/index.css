@@ -68,6 +68,11 @@ img {
   align-items: center;
   margin: 0 auto;
 }
+
+.idk{
+  background-color: antiquewhite;
+  height: 500px;
+}
 .logo{
   width: 100px;
   height: 100px;
@@ -166,10 +171,12 @@ input:focus{
 .movie__img{
   height: 300px;
   width: 200px;
-  margin-right: 50px;
-  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: -10px;
   border: 8px double #f0dcae;
   box-shadow: 0 0 10px #f0dcae;
+  transition: all 300ms ease;
 }
 .movies__img{
   height: 300px;
@@ -178,6 +185,9 @@ input:focus{
   margin-bottom: 20px;
   border: 8px double #f0dcae;
   box-shadow: 0 0 10px #f0dcae;
+}
+.movies__img:hover, .movie__img:hover{
+  scale: 1.1;
 }
 
 .section__title{
@@ -188,7 +198,6 @@ input:focus{
 }
 .fea_{
   font-size: 30px;
-  margin-bottom: 50px;
   font-weight: 900;
   text-shadow: 0 0 10px #f0dcae;
 }
@@ -196,6 +205,11 @@ input:focus{
   font-size: 30px;
   margin: 50px 0;
   text-shadow: 0 0 10px #f0dcae;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .main__container{
   width: 100%;
@@ -224,7 +238,8 @@ input:focus{
   display: flex;
   overflow-x: auto;
   flex-wrap: nowrap;
-  
+  align-items: center;
+  height: 400px;
   
 }
 .movies{
@@ -265,6 +280,7 @@ input:focus{
   justify-content: center;
   margin-top: -60px;
 }
+
 .main__description{
   color: aliceblue;
   font-weight: 400;
@@ -325,3 +341,5 @@ input:focus{
   color: aqua;
   border: 1px solid white;
 }
+
+
