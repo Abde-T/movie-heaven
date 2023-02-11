@@ -1,10 +1,9 @@
+
 import React, { useEffect, useState } from "react";
-import AddFav from "./AddFav";
 
 
-function Featured({title, titelSearch}) {
+function Featured({ title, titelSearch }) {
   const [movie, setMovie] = useState([]);
-
 
   const getMovie = async () => {
     const finalData = await (
@@ -17,6 +16,7 @@ function Featured({title, titelSearch}) {
   useEffect(() => {
     getMovie();
   }, []);
+
 
 
   return (
@@ -32,10 +32,13 @@ function Featured({title, titelSearch}) {
             {movie.slice(0, 8).map((m) => (
               <div className="movie " key={m.imdbID}>
                 <div className="movie__img">
-                <img src={m.Poster} alt=""  />
-                <div className="overlay">
-                <AddFav />
-                </div>
+                  <img src={m.Poster} alt=""/>
+                  <div className="overlay">
+                    <img src={m.Poster} alt="" className="overlay__img"/>
+                      <h3 className="overlay__title">{m.Title}</h3>
+                      <p className="overlay__year">Release: <span className="yellow">{m.Year}</span> </p>
+                      <p className="overlay__type">Type: <span className="yellow"> {m.Type} </span> </p>
+                  </div>
                 </div>
               </div>
             ))}

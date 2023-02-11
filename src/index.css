@@ -235,12 +235,14 @@ input:focus{
 }
 
 .movies__img{
+  overflow:hidden;
   height: 300px;
   width: 200px;
   margin-right: 40px;
   margin-bottom: 20px;
   border: 8px double #f0dcae;
   box-shadow: 0 0 10px #f0dcae;
+  transition: all 300ms ease;
 }
 .movies__img:hover, .movie__img:hover, .leftArrowStyles:active, .rightArrowStyles:active, .dotStyles:active, .slides__but:active{
   scale: 1.1;
@@ -309,16 +311,37 @@ position: absolute;
 background: hsl(0, 0%, 0%, 0.8);
 width: 100%;
 height: 100%;
-transition: 0.5 ease;
+transition: .5s ease;
 opacity: 0;
 font-size: 20px;
-
 top: 0;
 right: 0;
 text-align: center;
+
 }
-.movie:hover .overlay{
+.overlay__img{
+  height: 150px;
+  width: 120px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.overlay__title{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.overlay__year, .overlay__type{
+  font-size: 15px;
+  color: #ffffff;
+  margin-bottom: 5px;
+
+
+}
+.movie__img:hover .overlay{
 opacity: 1;
+}
+.movies__img:hover .overlay{
+  opacity: 1;
 }
 .movies{
   width: 100%;
