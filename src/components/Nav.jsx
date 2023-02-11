@@ -6,6 +6,7 @@ import SearshBar from "./SearshBar";
 import Movies from "./Movies";
 import Slider from "./Slider";
 import Featured from "./Featured";
+import DarkMode from "./DarkMode";
 
 function Nav(props) {
   const [movies, setMovies] = useState([]);
@@ -66,7 +67,7 @@ function Nav(props) {
         </div>
         <ul className="nav__link">
           <li className="nav__icon--1">
-            <FontAwesomeIcon icon="video" />
+            <DarkMode />
           </li>
           <li className="nav__icon">
             <a href="#featured">

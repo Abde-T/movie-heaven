@@ -1,11 +1,11 @@
 import Popcorn from "../assets/Popcorn.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Featured from "../components/Featured";
 import Footer from "../components/Footer";
 import Movies from "../components/Movies";
 import SearshBar from "../components/SearshBar";
+import DarkMode from "../components/DarkMode";
 
 const Main = (props) => {
   const [movies, setMovies] = useState([]);
@@ -23,6 +23,7 @@ const Main = (props) => {
   useEffect(() => {
     getMovies(searchValue);
   }, [searchValue]);
+
   return (
     <>
       <div className="main__container">
@@ -39,6 +40,9 @@ const Main = (props) => {
               Featured Franchises
               </a>
               </li>
+              <li className="link">
+                <DarkMode />
+            </li>
           </ul>
           <div className="wallpaper">
             <div className="logo_name">
