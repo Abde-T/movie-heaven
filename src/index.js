@@ -1,17 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { library} from '@fortawesome/fontawesome-svg-core';
-import {faVideo, faFilm, faPlay, faTimes, faBars, faCircle, faCircleArrowRight } from '@fortawesome/free-solid-svg-icons';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faVideo,
+  faFilm,
+  faPlay,
+  faTimes,
+  faBars,
+  faCircle,
+  faCircleArrowRight,
+  faHeart
+} from "@fortawesome/free-solid-svg-icons";
 
-library.add(faVideo, faFilm, faPlay, faTimes, faBars, faCircle, faCircleArrowRight)
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <App />
+library.add(
+  faVideo,
+  faFilm,
+  faPlay,
+  faTimes,
+  faBars,
+  faCircle,
+  faCircleArrowRight,
+  faHeart
 );
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

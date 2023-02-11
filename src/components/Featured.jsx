@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
+import AddFav from "./AddFav";
+
 
 function Featured({title, titelSearch}) {
   const [movie, setMovie] = useState([]);
+
 
   const getMovie = async () => {
     const finalData = await (
@@ -27,8 +30,13 @@ function Featured({title, titelSearch}) {
           </div>
           <div className="movie__list">
             {movie.slice(0, 8).map((m) => (
-              <div className="movie" key={m.imdbID}>
-                <img src={m.Poster} alt="" className="movie__img" />
+              <div className="movie " key={m.imdbID}>
+                <div className="movie__img">
+                <img src={m.Poster} alt=""  />
+                <div className="overlay">
+                <AddFav />
+                </div>
+                </div>
               </div>
             ))}
           </div>

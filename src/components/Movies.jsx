@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 
+
 function Movies(props) {
+
   
   return (
     <div className="movie__container">
@@ -9,7 +11,7 @@ function Movies(props) {
         <div className="search__movie__list">
           {props.movies.map((movie) => (
             <div className="movie" key={movie.imdbID}>
-              <img src={movie.Poster} alt="" className="movies__img" />
+              <img src={movie.Poster} alt="" className="movies__img"/>
             </div>
           ))}
         </div>
