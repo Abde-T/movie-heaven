@@ -36,8 +36,8 @@ function Featured({ title, titelSearch }) {
                   <div className="overlay">
                     <img src={m.Poster} alt="" className="overlay__img"/>
                       <h3 className="overlay__title">{m.Title}</h3>
-                      <p className="overlay__year">Release: <span className="yellow">{m.Year}</span> </p>
-                      <p className="overlay__type">Type: <span className="yellow"> {m.Type} </span> </p>
+                      <p className="overlay__year">Release: {m.Year} </p>
+                      <p className="overlay__type">Type: {m.Type}  </p>
                   </div>
                 </div>
               </div>
